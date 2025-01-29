@@ -1,0 +1,68 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    id "com.google.gms.google-services" // Add this for Firebase
+}
+
+android {
+    namespace = "com.example.lol"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.lol"
+        minSdkVersion 23
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode flutter.versionCode
+        versionName flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            // Enables code shrinking and resource shrinking
+            minifyEnabled true
+            shrinkResources true
+
+            // Use ProGuard rules for release builds
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            // TODO: Replace with your actual signing configuration for release builds
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            // Ensure debug builds do not shrink resources
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    // Core dependencies
+    implementation "androidx.core:core-ktx:1.12.0"
+    implementation "androidx.appcompat:appcompat:1.6.1"
+    implementation "com.google.android.material:material:1.9.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.2"
+    implementation "androidx.activity:activity-ktx:1.8.0"
+
+    // Firebase BoM (Bill of Materials)
+    implementation platform('com.google.firebase:firebase-bom:32.2.0')
+
+
+}
+

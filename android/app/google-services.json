@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "117097510050",
+    "project_id": "loginpage-cab51",
+    "storage_bucket": "loginpage-cab51.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117097510050:android:f61f98a7b66e103bb093fb",
+        "android_client_info": {
+          "package_name": "com.example.lol"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcY7hn9EW-dGU9YoPH-cCTWG57vQmWQzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
